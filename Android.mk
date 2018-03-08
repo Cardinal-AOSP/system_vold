@@ -106,8 +106,7 @@ endif
 
 ifneq ($(TARGET_EXFAT_DRIVER),)
   vold_cflags += -DCONFIG_EXFAT_DRIVER=\"$(TARGET_EXFAT_DRIVER)\"
-  mini_src_files += fs/Exfat.cpp
-  full_src_files += fs/Exfat.cpp
+  common_src_files += fs/Exfat.cpp
 endif
 
 include $(CLEAR_VARS)
