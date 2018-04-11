@@ -434,6 +434,10 @@ static int keymaster_sign_object_new(struct crypt_mnt_ftr *ftr,
     return keymaster_sign_object_for_cryptfs_scrypt(ftr->keymaster_blob, ftr->keymaster_blob_size,
             KEYMASTER_CRYPTFS_RATE_LIMIT, to_sign, to_sign_size, signature, signature_size,
             ftr->keymaster_blob, KEYMASTER_BLOB_SIZE, &ftr->keymaster_blob_size);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5679e9fa2509eb57c9b4808424ce4aea3af9704f
 }
 
 namespace android {

@@ -273,6 +273,7 @@ int CryptCommandListener::CryptfsCmd::runCommand(SocketClient *cli,
         rc = e4crypt_initialize_global_de();
     } else if (subcommand == "changepw") {
         const char* syntax = "Usage: cryptfs changepw "
+<<<<<<< HEAD
                              "default|password|pin|pattern [[currentpasswd] newpasswd]";
         const char* password;
         const char* currentpassword = "";
@@ -281,6 +282,15 @@ int CryptCommandListener::CryptfsCmd::runCommand(SocketClient *cli,
         }
         else if (argc == 4) {
             password = argv[3];
+=======
+                             "default|password|pin|pattern [currentpasswd] "
+                             "default|password|pin|pattern [newpasswd]";
+        const char* password;
+        const char* currentpassword;
+        if (argc == 4) {
+            currentpassword = "";
+            password = "";
+>>>>>>> 5679e9fa2509eb57c9b4808424ce4aea3af9704f
         } else if (argc == 5) {
             currentpassword = argv[3];
             password = argv[4];
